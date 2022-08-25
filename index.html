@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="es"/>
+    <link rel="stylesheet" href="Css/estilo.css">
+    <title>Practica</title>
+</head>
+<body translate="no"> <!--PONIENDO TRANSLATE NO EN EL BODY, SE INHIBEN LAS HERRAMIENTAS DE TRADUCCION COMO GOOGLE TRANSLATE-->
+    <h1>Socios del Club</h1>
+    <!--data-*
+Son atributos globales que forman una clase denominados atributos de datos personalizados , y que 
+se caracterizan por permitir intercambiar información entre el HTML en el momento de la carga del 
+archivo HTML.-->
+    <ul class="lista-socios">
+        <li data-socio="10784">Juan Carlos, Vitalicio.</li>
+        <li data-socio="97865">Roberto Gomez, Juvenil.</li><!--esto se corresponde con el css
+        li:after {
+        content: 'N° Socio: ' attr(data-socio);-->
+        <li data-socio="45732">Juana Martinez, Juvenil.</li>
+    </ul>
+    <!--BEFORE::AFTER!!-->
+    <ul class="befor">
+        <li>ahora</li>
+        <li>vas</li> 
+        <li>a ver</li>
+    </ul>
+
+    <!--ABBR + TITLE-abbr representa a un término abreviado o acrónimo, posiblemente explicado a través del 
+        atributo title. Si el atributo title está presente, debe proveer la versión expandida de la abreviación. -->
+    <p>Estamos viendo las siguientes tecnologías: 
+        <abbr title="Hypertext Markup Language">HTML</abbr>,
+        <abbr title="Cascading Stylesheets">CSS</abbr>, and  JavaScript.</p>
+        <p>Esto es lo que <abbr title="PODEMOS ABRIR SIN AVISO">PASA</abbr> abbr representa a un término abreviado o 
+            acrónimo, posiblemente <b>explicado a través del atributo title.</b> Si el atributo title está presente, debe proveer 
+            la versión expandida de la abreviación.  </p>
+
+    <!--DIR!!-->
+    <p dir="rtl">Esto está en español pero no está bien alineado.</p>
+    <p dir="ltr">Esto está en español y está bien alineado .</p>
+    
+    <!--HIDDEN!!!-->
+    <p id="oculto" hidden>Este texto está oculto, pero lo muestra java</p>
+    <p id="whatever" hidden>My Text</p>
+    <button type="checkbox" id="mostrar">Quieresver?</button>
+
+    <p id="resaltar">Este párrafo queremos que se note mucho!</p>
+    <div class='miclase'>     
+        Este contenido está en el propio HTML.        
+    </div>
+
+    <h2>Párrafos en diferentes idiomas.</h2>
+    <p lang="en-GB">This paragraph is defined as British English.</p>
+    <p lang="fr">Ce paragraphe est défini en français.</p>
+
+    <!--PROBANDO TABINDEX!!-->
+    <H2>Hacé click en cualquiera de estos para entender tabindex</H2>
+    <div class="tabis" tabindex="1">W3Schools</div><br>
+    <div class="tabis" tabindex="3">Google</div><br>
+    <div class="tabis" tabindex="2">Microsoft</div><br>
+    <div class="tabis" tabindex ="4">perrito</div><br>
+    <p tabindex="4"><b>Note:</b> probar la navegación entre elementos usando la tecla tab.</p><br>
+
+    <p translate="yes">is used to ask translation tools not to translate</p>
+    <p translate="no">is used to ask translation tools not to translate</p>
+    <br>
+    <
+    <!--ESPECIFICIDAD EN CSS-->
+    <div id="test" class="prueb">
+       <span style="color:aliceblue" >Text. lo que va en HTML pisa a todo lo demás</span> <br>
+       <span>este va por CSS- duplicar un selector agrega peso</span>
+       <br><br>
+    </div>
+    <p>git config --global credential.helper manager-core</p>
+    <div class="outer">
+        <p>Esto está en el outer div.</p>
+        <div class="inner">
+            <p>Este texto está en el inner div.-  OJO CON la PSEUDOCLASE :NOT. TOMA TODOS los P que están FUERA DEL CLASS</p>
+        </div>
+    </div>
+
+    <!--ELEMENTOS EN BLOQUE O EN LINEA-->
+    <div class="bloque">Elemento 1</div>
+    <div class="bloque">Elemento 2</div>
+    <div class="bloque">Elemento 3</div>
+    
+    <div class="inline">elemento 1</div>
+    <div class="inline">elemento 2</div>
+    <div class="inline">elemento 3</div>
+    <br>
+    <div class="inline-block">elemento 1</div>
+    <div class="inline-block">elemento 2</div>
+    <div class="inline-block">elemento 3</div>
+    <br>
+    <div class="visibility">Esto no se ve</div>
+    <div class="no-display">no se ve ni ocupa espacio</div>
+    <div class="opacity">se ve parcialmente</div>
+    <!--SELECTOR DE TIPO-->
+    <div class="eligiendo-span">
+        <span>Acá hay un texto con color de fondo</span>
+        <p>Este es su segundo renglón</p>
+        <span>Acá la publicidad de Codo a Codo.</span>
+    </div>
+    <!--SELECTOR DE CLASE-->
+    <p class="soy">yo solo soy</p>
+    <p class="soy clase">soy y clase</p>
+    <!--SELECTOR UNIVERSAL-->
+    <p class="warning">
+        <span lang="en-us">Un span verde</span> en un párrafo rojo.</span>
+    </p>
+    <p id="maincontent" lang="en-gb">
+        <span class="warning">Un span rojo</span> en un párrafo verde.</span>
+    </p>
+    <!--PROPIEDAD FLOAT-->
+    <div class="uno cont div1">Div 1</div>
+    <div class="uno cont div2">Div 2</div>
+    <div class="uno cont div3">Div 3</div>
+
+    <div class="dos cont div1">Div 1</div>
+    <div class="dos cont div2">Div 2</div>
+    <div class="dos cont div3">Div 3</div>
+    
+    <div class="tres cont div1">Div 1</div>
+    <div class="tres cont div2">Div 2</div>
+    <div class="tres cont div3">Div 3</div>
+
+   <p>$ git push
+    git: 'credential-manager' is not a git command. See 'git --help'.
+    
+    The most similar command is
+            credential-manager-core
+    git: 'credential-manager' is not a git command. See 'git --help'.
+    
+    The most similar command is
+            credential-manager-core
+    Everything up-to-date</p>
+   
+    <footer>
+        <small>© 2020 <code translate="no">Brand Name</span></code>
+        <b>© 2020 <code translate="yes">Brand Name</b></code>    
+    </footer>
+    
+    <script src="java/jScript.js"></script>
+</body>
+</html>

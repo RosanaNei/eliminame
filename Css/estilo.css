@@ -1,0 +1,234 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+html{
+    background-color: rgb(165, 148, 148);
+    margin: 20px;
+}
+
+output {
+    font: 1rem 'Fira Sans', sans-serif;
+   }
+h1 {
+    margin: 0;
+}
+
+ul {
+    margin: 10px 0 0;
+}
+  
+li {
+    position: relative;
+    width: 300px;
+    padding-bottom: 10px;
+}
+/*data-*
+Son atributos globales que forman una clase denominados atributos de datos personalizados , y que 
+se caracterizan por permitir intercambiar información entre el HTML en el momento de la carga del 
+archivo HTML.*/    
+.lista-socios li::after {
+    content: 'N° Socio: ' attr(data-socio);
+    position: absolute;
+    top: -22px;
+    left: 10px;
+    background: black;
+    color: white;
+    padding: 2px;
+    border: 1px solid #eee;
+    opacity: 0;
+    transition: 0.5s opacity;
+}
+li:hover::after {
+ opacity: .5;
+}
+
+.befor {
+    list-style: none;
+}
+/*BEFORE::AFTER!!*/
+.befor li::before {
+    display: inline-block;
+    content:"";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 6px 0 6px 10px;
+    border-color: transparent transparent transparent #007bff;
+    margin-right: 10px;
+    }
+/*HIDDEN!!!*/
+#oculto {
+    background: #ffe8d4;
+    border: 1px solid #f69d3c;
+    padding: 5px;
+    border-radius: 5px;
+   }
+
+#resaltar {
+    background: linear-gradient(to bottom, #ffe8d4, #f69d3c);
+    border: 1px solid #696969;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 1px black;
+   }
+
+#resaltar:before {
+    content: "ℹ️ ";
+    margin-right: 5px;
+   }
+
+.miclase {
+    background-color: aquamarine;
+    padding: 15px;
+    }
+    
+.miclase::after {
+    content:' «Contenido insertado con CSS»';
+    display: block;
+    }
+    
+.miclase::before {
+    content:' «Contenido insertado antes…»';
+    }
+    
+[lang="en-GB"]::before {
+    content:'SHES, EN ENLISH ';
+    }
+    
+[lang="fr"]::before {
+    content: url('imagen de una bandera french-flag.png');
+    }
+/*PROBANDO TABINDEX!!*/        
+.tabis, label {
+     display: block;
+     letter-spacing: .5px;
+     margin-bottom: 1rem;
+    }
+.tabis:focus {
+     font-weight: bold;
+    }
+/*ESPECIFICIDAD EN CSS*/
+div#test span{font-weight: 900;}
+#test#test span { color: rgb(56, 1, 50); }  
+div#test span { color: green; }
+#test span { color:darkgreen  }
+div span { color: blue; }
+span { color: red; }   
+.prueb span{color:#f69d3c}  
+div.prueb span{color:aqua}
+
+/*!--ESPECIFICIDAD Y PSEUDOELEMENTO NOT
+    La pseudoclase :not () de CSS representa elementos que no coinciden con una lista de selectores. Como evita que se 
+    seleccionen elementos específicos, se lo conoce como la pseudoclase de negación. /* Selecciona cualquier elemento 
+    que NO sea un párrafo  :not (p) { color: blue; }-->
+    La pseudoclase :not () requiere una lista separada por comas de uno o más selectores como argumento. AL*/
+div.outer p {
+    font-weight: bolder;
+    font-size: x-large;
+    color:orange;
+   }
+div:not(.outer) p {
+    color: rgb(0, 145, 255);
+   }
+/*ELEMENTOS EN BLOQUE O EN LINEA*/
+.bloque{
+    background: rgb(30, 110, 208); 
+    color: white; 
+    margin: 1px;
+    text-align: center;
+    }
+    
+.inline{
+    display: inline;    
+    padding: 0 10px; 
+    background-color: #f69d3c;
+    color: white; 
+    margin: 1px;
+}
+
+.inline-block{
+    display: inline-block;
+    width: 30%;
+    background-color: darkcyan;
+    color: #000;
+    margin: 2px;
+    text-align:center;
+}
+/*ELEMENTOS OCULTOS*/
+.visibility{
+    padding: 10px;
+    background-color: red;
+    visibility:hidden;
+}
+
+.no-display{
+    padding: 10px;
+    background-color: red;
+    display: none;
+}
+
+.opacity{
+    padding: 10px;
+    background-color: red;
+    opacity: .3;
+}
+/*SELECTOR DE TIPO*/
+.eligiendo-span span{
+    background-color: orange;
+}
+/*SELECTOR DE CLASE*/
+p.soy{
+    background-color: grey;
+}
+
+p.soy.clase{
+    border:solid 3px #000;
+}
+/*SELECTOR UNIVERSAL*/
+* [lang^=en] {
+    color: green;
+}
+  
+*.warning {
+    color: red;
+}
+  
+*#maincontent {
+    border: 1px solid blue;
+}
+  
+.floating {
+    float: left
+}
+  
+/* despejar automáticamente el siguiente hermano después de un elemento flotante */
+.floating + * {
+    clear: left;
+}
+
+.cont{
+    padding: 20px;
+    margin: 5px;
+}
+.uno{
+    float:left
+}
+.dos{
+    clear: left;
+}
+.tres{
+    float: right;
+}
+.div1{
+    background-color: red;
+}
+.div2{
+    background-color: blue;
+}
+.div3{
+    background-color: yellow;
+}
+
+   
